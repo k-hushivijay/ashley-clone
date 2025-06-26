@@ -5,6 +5,7 @@ import BusinessSection from './Components/BusinessIdeasSection';
 import MeetTeamSection from './Components/MeetTeamSection';
 import CustomerSection from './Components/CustomerSection';
 import PopularPublications from './Components/PopularPublications';
+import Footer from './Components/Footer';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <MeetTeamSection/>
       <CustomerSection/>
       <PopularPublications/>
+      <Footer/>
     </>
   );
 }

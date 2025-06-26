@@ -6,13 +6,24 @@ import MeetTeamSection from './Components/MeetTeamSection';
 import CustomerSection from './Components/CustomerSection';
 import PopularPublications from './Components/PopularPublications';
 import Footer from './Components/Footer';
+import './index.css';
+
 
 function App() {
   return (
     <>
+    
+
+
+
+
+
       <Navbar />
       <HeroSection />
-      <StudioSection/>
+      
+  <StudioSection />
+
+
       <BusinessSection/>
       <MeetTeamSection/>
       <CustomerSection/>

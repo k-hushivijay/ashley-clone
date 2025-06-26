@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import capsuleImage from "../assets/3image.jpg"; // Make sure this path is correct
+import capsuleImage from "../assets/3image.jpg";
 
 const services = [
   {
@@ -24,49 +24,44 @@ const BusinessSection = () => {
   const [hoverIndex, setHoverIndex] = useState(null);
 
   return (
-    <section className="bg-black text-white min-h-screen py-20 px-4 md:px-16">
-      <div className="max-w-7xl mx-auto">
-        {/* Top Capsule and Heading */}
-        <div className="flex flex-col lg:flex-row items-center gap-8">
-          {/* Capsule Image */}
-          <div className="rounded-full overflow-hidden w-48 h-20 flex-shrink-0 bg-yellow-400 flex items-center justify-center">
+    <section className="bg-black text-white py-24 px-6 lg:px-32 font-poppins">
+      <div className="max-w-7xl mx-auto space-y-16">
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-10">
+          <div className="w-48 h-20 bg-[#c7a17a] rounded-full overflow-hidden flex items-center justify-center shadow-lg">
             <img
               src={capsuleImage}
-              alt="team"
-              className="object-cover w-full h-full rounded-full"
+              alt="Capsule"
+              className="w-full h-full object-cover rounded-full"
             />
           </div>
 
-          {/* Headings */}
           <div className="text-center lg:text-left">
-            <h2 className="text-4xl md:text-5xl font-light leading-snug">
-              <span className="font-semibold">Unique</span> Ideas<br />
-              For <span className="font-semibold">Your</span> Business.
+            <h2 className="text-5xl font-cormorant leading-snug">
+              <span className="text-white font-semibold">Unique</span> Ideas<br />
+              For <span className="text-white font-semibold">Your</span> Business.
             </h2>
           </div>
 
-          {/* Button */}
-          <div className="mt-6 lg:mt-0">
-            <button className="bg-yellow-400 text-black font-semibold rounded-full px-6 py-3 flex items-center gap-2">
+          <div>
+            <button className="bg-[#c7a17a] text-black font-semibold rounded-full px-6 py-3 flex items-center gap-3 transition hover:scale-105 duration-300">
               WHAT WE DO
-              <span className="bg-black text-yellow-400 p-2 rounded-full">→</span>
+              <span className="bg-black text-[#c7a17a] p-2 rounded-full text-sm">→</span>
             </button>
           </div>
         </div>
 
-        {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-24">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {services.map((service, index) => (
             <div
               key={index}
               onMouseEnter={() => setHoverIndex(index)}
               onMouseLeave={() => setHoverIndex(null)}
-              className="bg-zinc-900 rounded-xl p-6 transition-all duration-300 ease-in-out cursor-pointer min-h-[160px]"
+              className="bg-zinc-900 p-6 rounded-2xl shadow-md cursor-pointer transition-all duration-300"
             >
-              <h3 className="text-xl font-medium mb-2">{service.title}</h3>
+              <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
               <p
-                className={`text-gray-400 transition-opacity duration-300 ease-in-out ${
-                  hoverIndex === index ? "opacity-100" : "opacity-0 h-0 overflow-hidden"
+                className={`text-gray-400 text-sm transition-all duration-300 ease-in-out ${
+                  hoverIndex === index ? "opacity-100 max-h-40" : "opacity-0 max-h-0 overflow-hidden"
                 }`}
               >
                 {service.description}

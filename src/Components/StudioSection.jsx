@@ -1,49 +1,55 @@
 import React from "react";
 import teamImage from "../assets/1image.jpg";
-import womanImage from "../assets/2image.jpg";// bottom left circular image
+import womanImage from "../assets/2image.jpg";
 
 export default function StudioSection() {
   return (
-    <section className="bg-white w-full py-20 px-4 lg:px-24">
-      <div className="flex flex-col lg:flex-row items-center justify-between gap-10">
+    <section className="relative w-full bg-white py-24 px-6 lg:px-32 font-poppins">
+      <div className="flex flex-col-reverse lg:flex-row items-center justify-between gap-16">
         {/* Left Content */}
         <div className="w-full lg:w-1/2">
-          <h2 className="text-5xl lg:text-6xl font-bold text-black leading-tight mb-6">
+          <h2 className="text-5xl lg:text-6xl font-cormorant font-bold leading-tight text-black mb-8">
             Discover <br />
-            <span className="font-light">Our Studio</span>
+            <span className="text-[#c7a17a] font-light">Our Studio</span>
           </h2>
-          <p className="text-neutral-600 text-lg mb-10 leading-relaxed font-[DM Sans]">
-            We are a team of passionate individuals dedicated to transforming ideas
-            into reality. Our studio thrives on diversity, collaboration, and a drive
-            to create extraordinary experiences.
+          <p className="text-gray-500 text-lg leading-relaxed mb-6">
+            At our design studio, we are a collective of talented individuals ignited
+            by our unwavering passion for transforming ideas into reality. With a
+            harmonious blend of diverse backgrounds and a vast array of skill sets, we
+            join forces to create compelling solutions for our esteemed clients.
           </p>
-
-          {/* Circular Image + Caption */}
-          <div className="flex items-center gap-4">
+          <p className="text-gray-500 text-lg leading-relaxed mb-10">
+            Collaboration is at the heart of what we do. Our team thrives on the
+            synergy that arises when unique perspectives converge, fostering an
+            environment of boundless creativity.
+          </p>
+          <div className="flex items-center gap-5">
             <img
               src={womanImage}
               alt="team member"
-              className="w-20 h-20 rounded-full object-cover shadow-lg"
+              className="w-16 h-16 rounded-full object-cover border-2 border-[#c7a17a]"
             />
-            <div>
-              <p className="text-sm font-semibold text-black">
-                Passionately Creating Design
+            <div className="text-left">
+              <p className="text-base font-semibold text-black">
+                Passionately Creating <span className="font-normal">Design</span>
               </p>
-              <p className="text-xs text-neutral-500">
-                Wonders: Unleashing Boundless Creativity
+              <p className="text-sm text-gray-400 italic">
+                Wonders: <span className="font-semibold text-black">Unleashing</span>{" "}
+                Boundless Creativity
               </p>
             </div>
           </div>
         </div>
 
-        {/* Right Side Image */}
-        <div className="w-full lg:w-1/2 flex justify-end items-center">
-          <img
-            src={teamImage}
-            alt="Studio team"
-            className="w-[80%] rounded-xl object-cover shadow-xl"
-            style={{ transform: "scale(1.05)" }}
-          />
+        {/* Right Image */}
+        <div className="w-full lg:w-1/2 flex justify-center lg:justify-end">
+          <div className="w-full max-w-[420px] aspect-[3/4] overflow-hidden">
+            <img
+              src={teamImage}
+              alt="Studio team"
+              className="object-cover w-full h-full"
+            />
+          </div>
         </div>
       </div>
     </section>

@@ -6,44 +6,45 @@ import img4 from "../assets/7image.jpg";
 
 const MeetTeamSection = () => {
   return (
-    <section className="bg-white text-black min-h-screen py-16 px-4 md:px-16">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
-        {/* Left Content */}
-        <div>
-          <h2 className="text-6xl font-light leading-tight">
-            Meet <br /> <span className="font-semibold">Our</span> Team
+    <section className="bg-white text-black py-24 px-6 lg:px-32 font-poppins relative">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+        {/* Left Text */}
+        <div className="space-y-8">
+          <h2 className="text-5xl lg:text-6xl font-cormorant leading-tight">
+            Meet <br />
+            <span className="text-[#c7a17a] font-light">Our</span> Team
           </h2>
-          <p className="mt-6 text-gray-600 text-lg">
-            We are talented individuals who are passionate about bringing ideas to life. With a diverse range of backgrounds and skill sets, we collaborate to produce effective solutions for our clients.
+          <p className="text-gray-500 text-lg leading-relaxed">
+            We are talented individuals who are passionate about bringing ideas to life.
           </p>
-          <p className="mt-4 text-gray-600 text-lg">
-            Together, our creative team is committed to delivering impactful work that exceeds expectations.
+          <p className="text-gray-500 text-lg leading-relaxed">
+            Together, our creative team is committed to delivering impactful work.
           </p>
-
-          <button className="mt-8 bg-yellow-400 text-black font-semibold px-6 py-3 rounded-full flex items-center gap-2">
-            READ MORE <span className="bg-black text-yellow-400 p-2 rounded-full">→</span>
+          <button className="bg-[#c7a17a] text-black font-semibold rounded-full px-6 py-3 flex items-center gap-3 transition hover:scale-105 duration-300">
+            READ MORE
+            <span className="bg-black text-[#c7a17a] p-2 rounded-full text-sm">→</span>
           </button>
         </div>
 
-        {/* Right Grid of Images */}
+        {/* Image Grid */}
         <div className="grid grid-cols-2 gap-6">
-          <div className="rounded overflow-hidden">
-            <img src={img1} alt="Team Member 1" className="object-cover w-full h-auto rounded-md shadow-md" />
-          </div>
-          <div className="rounded overflow-hidden">
-            <img src={img2} alt="Team Member 2" className="object-cover w-full h-auto rounded-md shadow-md" />
-          </div>
-          <div className="rounded overflow-hidden">
-            <img src={img3} alt="Team Member 3" className="object-cover w-full h-auto rounded-md shadow-md" />
-          </div>
-          <div className="rounded overflow-hidden">
-            <img src={img4} alt="Team Member 4" className="object-cover w-full h-auto rounded-md shadow-md" />
-          </div>
+          {[img1, img2, img3, img4].map((img, idx) => (
+            <div
+              key={idx}
+              className="w-full aspect-[3/4] overflow-hidden rounded-xl shadow-lg"
+            >
+              <img
+                src={img}
+                alt={`Team Member ${idx + 1}`}
+                className="object-cover w-full h-full rounded-xl"
+              />
+            </div>
+          ))}
         </div>
       </div>
-
-      {/* Founders Note */}
-      <p className="text-right text-sm text-gray-500 mt-4 mr-10">* The founders of our agency</p>
+      <p className="text-right text-sm text-gray-400 italic mt-8 mr-10">
+        * The founders of our agency
+      </p>
     </section>
   );
 };

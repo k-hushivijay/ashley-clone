@@ -136,27 +136,5 @@ http://localhost:5173
   content: ["./index.html", "./src/**/*.{js,jsx}"]
   ```
 
-- Use only valid Tailwind class names.
 
----
 
-## 📸 Screenshot
-
-_Add a screenshot if needed:_
-
-```markdown
-![Ashley Clone Screenshot](./src/assets/screenshot.jpg)
-```
-
----
-
-## ✨ Credits
-
-Made with 💖 by **Khushi Vijay**  
-Passionate about frontend development, UI design, and creative projects.
-
----
-
-## 📄 License
-
-This project is for personal learning and educational use only.

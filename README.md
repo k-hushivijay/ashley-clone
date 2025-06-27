@@ -16,22 +16,20 @@ This is a fully responsive, modern **portfolio/studio website clone** of the Ash
 
 ## 📁 Folder Structure
 
+```
 ashley-clone/
 ├── public/
 ├── src/
-│ ├── assets/ # Images & assets
-│ ├── Components/ # Reusable components like Navbar, Footer
-│ ├── App.jsx # Root component
-│ ├── index.css # Tailwind directives and base styles
-│ └── main.jsx # React root renderer
-├── tailwind.config.js # Tailwind configuration
-├── postcss.config.js # PostCSS plugins
-├── index.html # Root HTML file
+│   ├── assets/              # Images & assets
+│   ├── Components/          # Reusable components like Navbar, Footer
+│   ├── App.jsx              # Root component
+│   ├── index.css            # Tailwind directives and base styles
+│   └── main.jsx             # React root renderer
+├── tailwind.config.js       # Tailwind configuration
+├── postcss.config.js        # PostCSS plugins
+├── index.html               # Root HTML file
 └── package.json
-
-yaml
-Copy
-Edit
+```
 
 ---
 
@@ -42,10 +40,11 @@ Edit
 ```bash
 npm install -D tailwindcss postcss autoprefixer
 npx tailwindcss init -p
-Tailwind Configuration (tailwind.config.js)
-js
-Copy
-Edit
+```
+
+### Tailwind Configuration (`tailwind.config.js`)
+
+```js
 export default {
   content: [
     "./index.html",
@@ -63,65 +62,101 @@ export default {
   },
   plugins: [],
 };
-PostCSS Configuration (postcss.config.js)
-js
-Copy
-Edit
+```
+
+### PostCSS Configuration (`postcss.config.js`)
+
+```js
 export default {
   plugins: {
     tailwindcss: {},
     autoprefixer: {},
   },
 }
-CSS File (src/index.css)
-css
-Copy
-Edit
+```
+
+### CSS File (`src/index.css`)
+
+```css
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-Make sure this CSS file is imported in your main.jsx or App.jsx:
+```
 
-js
-Copy
-Edit
+Make sure this CSS file is imported in your `main.jsx` or `App.jsx`:
+
+```js
 import './index.css';
-🧑‍💻 How to Run the Project
-1. Clone the repository
-bash
-Copy
-Edit
+```
+
+---
+
+## 🧑‍💻 How to Run the Project
+
+### 1. Clone the repository
+
+```bash
 git clone https://github.com/your-username/ashley-clone.git
 cd ashley-clone
-2. Install dependencies
-bash
-Copy
-Edit
+```
+
+### 2. Install dependencies
+
+```bash
 npm install
-3. Start development server
-bash
-Copy
-Edit
+```
+
+### 3. Start development server
+
+```bash
 npm run dev
-4. View in browser
-arduino
-Copy
-Edit
+```
+
+### 4. View in browser
+
+```
 http://localhost:5173
-🧪 Troubleshooting Tailwind
-Make sure src/index.css includes:
+```
 
-css
-Copy
-Edit
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-Ensure you restart the dev server (npm run dev) after Tailwind config changes.
+---
 
-Double-check your tailwind.config.js:
+## 🧪 Troubleshooting Tailwind
 
-js
-Copy
-Edit
-content: ["./index.html", "./src/**/*.{js,jsx}"]
+- Make sure `src/index.css` includes:
+  ```css
+  @tailwind base;
+  @tailwind components;
+  @tailwind utilities;
+  ```
+
+- Ensure you restart the dev server (`npm run dev`) after Tailwind config changes.
+
+- Double-check your `tailwind.config.js`:
+  ```js
+  content: ["./index.html", "./src/**/*.{js,jsx}"]
+  ```
+
+- Use only valid Tailwind class names.
+
+---
+
+## 📸 Screenshot
+
+_Add a screenshot if needed:_
+
+```markdown
+![Ashley Clone Screenshot](./src/assets/screenshot.jpg)
+```
+
+---
+
+## ✨ Credits
+
+Made with 💖 by **Khushi Vijay**  
+Passionate about frontend development, UI design, and creative projects.
+
+---
+
+## 📄 License
+
+This project is for personal learning and educational use only.

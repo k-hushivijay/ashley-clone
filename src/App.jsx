@@ -6,7 +6,7 @@ import MeetTeamSection from './Components/MeetTeamSection';
 import CustomerSection from './Components/CustomerSection';
 import PopularPublications from './Components/PopularPublications';
 import Footer from './Components/Footer';
-import './index.css';
+import '../src/index.css';
 
 
 function App() {

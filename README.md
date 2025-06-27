@@ -87,44 +87,41 @@ Copy
 Edit
 import './index.css';
 🧑‍💻 How to Run the Project
-Clone the repository
-
+1. Clone the repository
 bash
 Copy
 Edit
 git clone https://github.com/your-username/ashley-clone.git
 cd ashley-clone
-Install dependencies
-
+2. Install dependencies
 bash
 Copy
 Edit
 npm install
-Start development server
-
+3. Start development server
 bash
 Copy
 Edit
 npm run dev
-View in browser
-
+4. View in browser
 arduino
 Copy
 Edit
 http://localhost:5173
 🧪 Troubleshooting Tailwind
-If Tailwind classes are not applying:
+Make sure src/index.css includes:
 
-Ensure index.css has the @tailwind directives.
-
-Restart npm run dev if you make config changes.
-
-Check tailwind.config.js content paths (should point to ./src/**/*.{js,jsx}).
-
-📸 Screenshot
-Add a screenshot here if needed:
-
-markdown
+css
 Copy
 Edit
-![Ashley Clone Screenshot](./src/assets/screenshot.jpg)
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+Ensure you restart the dev server (npm run dev) after Tailwind config changes.
+
+Double-check your tailwind.config.js:
+
+js
+Copy
+Edit
+content: ["./index.html", "./src/**/*.{js,jsx}"]

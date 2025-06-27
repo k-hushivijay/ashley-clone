@@ -96,7 +96,7 @@ import './index.css';
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/your-username/ashley-clone.git
+git clone https://github.com/k-hushivijay/ashley-clone.git
 cd ashley-clone
 ```
 
